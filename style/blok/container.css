@@ -1,0 +1,9 @@
+.container {
+  max-width: 1170px;
+  padding: 0 16px;
+}
+@media (min-width: 1020px) {
+  .container {
+    padding: 0 160px;
+  }
+}/*# sourceMappingURL=container.css.map */

@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style/main.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+
+</head>
+
+<body class="app">
+  <header class="header">
+    <div class="header__carusel">
+      <div class="header__carusel-blur"></div>
+      <div class="header__carusel-row">
+        <div class="header__carusel-item">
+          <img src="./image/carusel/1row1.png" alt="painting" class="header__carusel-img">
+          <p class="header__carusel-text">Caught in the....</p>
+          <p class="header__carusel-name">Joan Callister</p>
+        </div>
+        <div class="header__carusel-item">
+          <img src="./image/carusel/1row2.png" alt="painting" class="header__carusel-img">
+          <p class="header__carusel-text">Parenting</p>
+          <p class="header__carusel-name">Lucie Svoboda</p>
+        </div>
+        <div class="header__carusel-item">
+          <img src="./image/carusel/1row3.png" alt="painting" class="header__carusel-img">
+          <p class="header__carusel-text">Garden in the...</p>
+          <p class="header__carusel-name">Lucie Svoboda</p>
+        </div>
+        <div class="header__carusel-item">
+          <img src="./image/carusel/1row4.png" alt="painting" class="header__carusel-img">
+          <p class="header__carusel-text">In un mare di colore</p>
+          <p class="header__carusel-name header__carusel-name--small">Alessandro Andreuccetti</p>
+        </div>
+        <div class="header__carusel-item"> 
+          <img src="./image/carusel/1row5.png" alt="painting" class="header__carusel-img">
+          <p class="header__carusel-text">Bonds of Freedom</p>
+          <p class="header__carusel-name header__carusel-name--small">Margarita Stepanova</p>
+        </div>
+        <div class="header__carusel-item"> 
+          <img src="./image/carusel/1row6.png" alt="painting" class="header__carusel-img">
+          <p class="header__carusel-text">Mare d'inverno</p>
+          <p class="header__carusel-name header__carusel-name--small">Alessandro Andreuccetti</p>
+        </div>
+        <div class="header__carusel-item"> 
+          <img src="./image/carusel/1row7.png" alt="painting" class="header__carusel-img">
+          <p class="header__carusel-text">Caught in the....</p>
+          <p class="header__carusel-name">Joan Callister</p>
+        </div>
+      </div>
+      <div class="header__carusel-row header__carusel-row--revers">
+        <div class="header__carusel-item">
+          <img src="./image/carusel/2row1.png" alt="painting" class="header__carusel-img">
+          <p class="header__carusel-text">Blue shadow</p>
+          <p class="header__carusel-name">Alessandro Andreuccetti</p>
+        </div>
+        <div class="header__carusel-item">
+          <img src="./image/carusel/2row2.png" alt="painting" class="header__carusel-img">
+          <p class="header__carusel-text">A glimpse of sky</p>
+          <p class="header__carusel-name">Margarita Stepanova</p>
+        </div>
+        <div class="header__carusel-item">
+          <img src="./image/carusel/2row3.png" alt="painting" class="header__carusel-img">
+          <p class="header__carusel-text">Gemini</p>
+          <p class="header__carusel-name">Lucie Svoboda</p>
+        </div>
+        <div class="header__carusel-item">
+          <img src="./image/carusel/2row4.png" alt="painting" class="header__carusel-img">
+          <p class="header__carusel-text">Milky Way</p>
+          <p class="header__carusel-name header__carusel-name--small">Lucie Svoboda</p>
+        </div>
+        <div class="header__carusel-item"> 
+          <img src="./image/carusel/2row5.png" alt="painting" class="header__carusel-img">
+          <p class="header__carusel-text">Anima</p>
+          <p class="header__carusel-name">Lucie Svoboda</p>
+        </div>
+        <div class="header__carusel-item"> 
+          <img src="./image/carusel/2row6.png" alt="painting" class="header__carusel-img">
+          <p class="header__carusel-text">Anima</p>
+          <p class="header__carusel-name header__carusel-name--small">Lucie Svoboda</p>
+        </div>
+        <div class="header__carusel-item"> 
+          <img src="./image/carusel/2row7.png" alt="painting" class="header__carusel-img">
+          <p class="header__carusel-text">La Vernaccia e le torri...</p>
+          <p class="header__carusel-name header__carusel-name--small">Alessandro Andreuccetti</p>
+        </div>
+      </div>
+      <div class="header__carusel-row">
+        <div class="header__carusel-item">
+          <img src="./image/carusel/3row1.png" alt="painting" class="header__carusel-img">
+          <p class="header__carusel-text">Mr. Winter</p>
+          <p class="header__carusel-name">Lucie Svoboda</p>
+        </div>
+        <div class="header__carusel-item">
+          <img src="./image/carusel/3row2.png" alt="painting" class="header__carusel-img">
+          <p class="header__carusel-text">Rosso fuoco</p>
+          <p class="header__carusel-name header__carusel-name--small">Alessandro Andreuccetti</p>
+        </div>
+        <div class="header__carusel-item">
+          <img src="./image/carusel/3row3.png" alt="painting" class="header__carusel-img">
+          <p class="header__carusel-text">Acquarelli</p>
+          <p class="header__carusel-name header__carusel-name--small">Alessandro Andreuccetti</p>
+        </div>
+        <div class="header__carusel-item">
+          <img src="./image/carusel/3row4.png" alt="painting" class="header__carusel-img">
+          <p class="header__carusel-text">I'll Be Here</p>
+          <p class="header__carusel-name header__carusel-name--small">Margarita Stepanova</p>
+        </div>
+        <div class="header__carusel-item"> 
+          <img src="./image/carusel/3row5.png" alt="painting" class="header__carusel-img">
+          <p class="header__carusel-text">Natural Harmony:...</p>
+          <p class="header__carusel-name header__carusel-name--small">Alessandro Andreuccetti</p>
+        </div>
+        <div class="header__carusel-item"> 
+          <img src="./image/carusel/3row6.png" alt="painting" class="header__carusel-img">
+          <p class="header__carusel-text">Not Alone</p>
+          <p class="header__carusel-name header__carusel-name--small">Margarita Stepanova</p>
+        </div>
+        <div class="header__carusel-item"> 
+          <img src="./image/carusel/3row7.png" alt="painting" class="header__carusel-img">
+          <p class="header__carusel-text">Unity's Touch</p>
+          <p class="header__carusel-name header__carusel-name--small">Margarita Stepanova</p>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="header__top">
+        <div class="header__logo">
+          <img class="header__logo-image" src="./image/logo.svg" alt="logo">
+          <p class="header__logo-name">Artmywall</p>
+        </div>
+        <a href="#" class="header__portfolio">
+          <div class="header__portfolio-content">
+            <img class="header__portfolio-logo" src="./image/icon/paintIcon.svg" alt="paintIcon">
+            <p class="header__portfolio-name">Wall Portfolio</p>
+            <img src="./image/icon/arrow.svg" alt="arrow icon" class="header__portfolio-arrow">
+          </div>
+        </a>
+      </div>
+      <div class="header__content">
+        <h3 class="header__show">Show Art on Walls </h3>
+        <h1 class="header__title">Artmywall</h1>
+        <p class="header__description">
+          Need professional backgrounds for your art? Artmywall is the easiest and most cost effective way to display
+          your
+          artwork realistically in trendy interiors. Works for iPhone and iPad
+        </p>
+        <a href="#" class="header__link-app">
+          <div class="header__link-content">
+            <img class="header__link-logo" src="./image/icon/Iphone.svg" alt="iphone">
+            <p class="header__link-text">
+              Download on the <br /> <span class="header__link-text--biger">App Store
+              </span> </p>
+          </div>
+        </a>
+        <div class="header__gradient">
+
+        </div>
+      </div>
+    </div>
+
+  </header>
+
+  <script>
+let translateValue = 0; 
+
+function showSlides() {
+  translateValue -= 119; // Зміщення на ширину одного блоку
+
+  // Налаштовуємо зміщення всієї групи блоків
+  document.querySelector('.header__carusel-container').style.transform = `translateX(${translateValue}px)`;
+
+  // Переміщуємо перший блок в кінець, щоб забезпечити безперервність
+  const firstSlide = document.querySelector('.header__carusel-item');
+  firstSlide.parentNode.appendChild(firstSlide);
+
+  setTimeout(showSlides, 1000); // Час між автоматичними переходами (в мілісекундах)
+}
+
+showSlides();
+  </script>
+
+  <main class="main">
+    <section  class="app__section step">
+      <div class="container step__container">
+        <div class="step__item">
+          <div class="step__info">
+            <div class="step__number">
+              <img class="step__number-img" src="./image/number/01.svg" alt="number one">
+              <p class="step__number-text">Step</p>
+            </div>
+
+            <h3 class="step__title">Pick a wall</h3>
+
+            <p class="step__text">
+              It takes just a few clicks to come up with realistic image of your artwork in living room, bedroom,
+              gallery, etc. New interiors are added every two weeks.
+            </p>
+          </div>
+
+          <div class="step__image">
+            <div class="step__image-wrapper">
+              <video class="step__video" muted autoplay loop src="./image/onboarding/step2.MOV"></video>
+              <img class="step__image-phone step__image-phone--position" src="./image/phone/phone.png" alt="">
+            </div>
+
+          </div>
+        </div>
+        <div class="step__item step__item--noellips">
+          <div class="step__info">
+            <div class="step__number">
+              <img class="step__number-img" src="./image/number/02.svg" alt="number one">
+              <p class="step__number-text">Step</p>
+            </div>
+
+            <h3 class="step__title">Upload your artwork</h3>
+
+            <p class="step__text">
+              Add artwork dimensions for proportional look on walls
+            </p>
+          </div>
+
+          <div class="step__image step__image--nobackground">
+              <div class="step__image-wrapper">
+                <video class="step__video step__video--anomal" muted autoplay loop src="./image/onboarding/step3.MOV"></video>
+                <img class="step__image-phone " src="./image/phone/phone.png" alt="">
+              </div>
+          </div>
+        </div>
+        <div class="step__item">
+          <div class="step__info">
+            <div class="step__number">
+              <img class="step__number-img" src="./image/number/04.svg" alt="number one">
+              <p class="step__number-text">Step</p>
+            </div>
+
+            <h3 class="step__title">Choose frame</h3>
+
+            <p class="step__text">
+              Select a perfect framing option - wooden or plastic, with or without matte. Choose from 50+ frame types
+            </p>
+          </div>
+
+          <div class="step__image">
+            <div class="step__image-wrapper">
+              <video class="step__video" muted autoplay loop src="./image/onboarding/step1.MOV"></video>
+              <img class="step__image-phone step__image-phone--position" src="./image/phone/phone.png" alt="">
+            </div>
+
+          </div>
+        </div>
+        <div class="step__item step__item--noellips">
+          <div class="step__info">
+            <div class="step__number">
+              <img class="step__number-img" src="./image/number/04.svg" alt="number one">
+              <p class="step__number-text">Step</p>
+            </div>
+
+            <h3 class="step__title">Save final image in high resolution</h3>
+
+            <p class="step__text">
+              Add artwork dimensions for proportional look on walls
+            </p>
+          </div>
+
+          <div class="step__image step__image--nobackground">
+            <div class="step__image-wrapper">
+              <video class="step__video step__video--anomal" muted autoplay loop src="./image/onboarding/step4.MOV"></video>
+              <img class="step__image-phone" src="./image/phone/phone.png" alt="">
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="app__section testimonials">
+      <div class="container">
+        <h2 class="testimonials__title">Testimonials</h2>
+       <div class="testimonials__wrraper">
+        <div class="swiper test mySwiper">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide testimonials__mobale">
+              <div class="testimonials__content ">
+                <div class="testimonials__item">
+                  <p class="testimonials__text">
+                    I recommend this app! A real find for artists! Time saving and very clear interface with a bunch of designs for your taste.
+                  </p>
+                  <div class="testimonials__info">
+                    <p class="testimonials__user">
+                      @hi.alinalobanova
+                    </p>
+                    <img src="./image/icon/stars.svg" alt="rating 5 stars" class="testimonials__rating">
+                  </div>
+                </div>
+                <div class="testimonials__item">
+                  <p class="testimonials__text">
+                    Convenient iOS application (iPhone, iPad) for showcasing artworks in interiors. Artmywall makes it very easy to put your artwork on your walls: choose a wall, upload your work, choose a frame and save the finished image in high resolution
+                  </p>
+                  <div class="testimonials__info">
+                    <p class="testimonials__user">@Uartist83</p>
+                    <img src="./image/icon/stars.svg" alt="rating 5 stars" class="testimonials__rating">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide testimonials__mobale">
+              <div class="testimonials__content">
+                <div class="testimonials__item">
+                  <p class="testimonials__text">
+                    Just started using the app today and exploring all the different backgrounds. It is simple to use and there are lots of options. It is also a competitively priced product as some of these apps are quite expensive. I chose this app because I wanted something easy to use and cost-effective. I would recommend.
+                  </p>
+                  <div class="testimonials__info">
+                    <p class="testimonials__user">@mizzartz</p>
+                    <img src="./image/icon/stars.svg" alt="rating 5 stars" class="testimonials__rating">
+                  </div>
+                </div>
+                <div class="testimonials__item">
+                  <p class="testimonials__text">
+                    Love using the spaces to visualise my work.
+      Also love the support. Thank You!🙏💗
+                  </p>
+                  <div class="testimonials__info">
+                    <p class="testimonials__user">
+                      @Dg1463
+                    </p>
+                    <img src="./image/icon/stars.svg" alt="rating 5 stars" class="testimonials__rating">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide testimonials__mobale">
+              <div class="testimonials__content">
+                <div class="testimonials__item">
+                  <p class="testimonials__text">
+                    I am absolutely loving my new app Artmywall which lets me display my paintings in room settings. It is way better than having to push the settee around the house!! 😀
+                  </p>
+                  <div class="testimonials__info">
+                    <p class="testimonials__user">
+                      @juliatannerart
+                    </p>
+                    <img src="./image/icon/stars.svg" alt="rating 5 stars" class="testimonials__rating">
+                  </div>
+                </div>
+                <div class="testimonials__item">
+                  <p class="testimonials__text">
+                    Really helpful for my instagram art Account. It looks so much better with art my wall
+                  </p>
+                  <div class="testimonials__info">
+                    <p class="testimonials__user">@Sabrina Diana Art</p>
+                    <img src="./image/icon/stars.svg" alt="rating 5 stars" class="testimonials__rating">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide testimonials__mobale"> 
+                     <div class="testimonials__content">
+              <div class="testimonials__item">
+                <p class="testimonials__text">
+                  Super app! Finally I have a possibility to present my works.
+                  The interiors are very cool. Thank you.
+                </p>
+                <div class="testimonials__info">
+                  <p class="testimonials__user">@Mamekina</p>
+                  <img src="./image/icon/stars.svg" alt="rating 5 stars" class="testimonials__rating">
+                </div>
+              </div>
+              <div class="testimonials__item">
+                <p class="testimonials__text">
+                  Very smart and useful app. Highly recommend for all artistas, galleries etc.
+                </p>
+                <div class="testimonials__info">
+                  <p class="testimonials__user">@Lor Salvator</p>
+                  <img src="./image/icon/stars.svg" alt="rating 5 stars" class="testimonials__rating">
+                </div>
+              </div>
+            </div></div>
+            <div class="swiper-slide testimonials__mobale">
+              <div class="testimonials__content">
+                <div class="testimonials__item">
+                  <p class="testimonials__text">
+                    Very easy to use and enables you to present your in real settings for your audience!
+                  </p>
+                  <div class="testimonials__info">
+                    <p class="testimonials__user">@reyhangulecart</p>
+                    <img src="./image/icon/stars.svg" alt="rating 5 stars" class="testimonials__rating">
+                  </div>
+                </div>
+                <div class="testimonials__item">
+                  <p class="testimonials__text">
+                    Obsessed with my Artmywall app! Finally an app with rooms that have COLOR 🙏 I need this pink sofa!
+                  </p>
+                  <div class="testimonials__info">
+                    <p class="testimonials__user">@nikistearman</p>
+                    <img src="./image/icon/stars.svg" alt="rating 5 stars" class="testimonials__rating">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide testimonials__mobale">
+              <div class="testimonials__content">
+                <div class="testimonials__item">
+                  <p class="testimonials__text">
+                    I've been rocking with this app for awhile, thank you for this unexpected feature 🙏
+                  </p>
+                  <div class="testimonials__info">
+                    <p class="testimonials__user">@johnsondonart</p>
+                    <img src="./image/icon/stars.svg" alt="rating 5 stars" class="testimonials__rating">
+                  </div>
+                </div>
+                <div class="testimonials__item">
+                  <p class="testimonials__text">
+                    The new backgrounds and updates are stellar! Thanks so much, Artmywall!
+                  </p>
+                  <div class="testimonials__info">
+                    <p class="testimonials__user">@kevinumbelphotography</p>
+                    <img src="./image/icon/stars.svg" alt="rating 5 stars" class="testimonials__rating">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide testimonials__desktop">
+              <div class="testimonials__content">
+                <div class="testimonials__item">
+                  <p class="testimonials__text">
+                    I recommend this app! A real find for artists! Time saving and very clear interface with a bunch of designs for your taste.
+                  </p>
+                  <div class="testimonials__info">
+                    <p class="testimonials__user">
+                      @hi.alinalobanova
+                    </p>
+                    <img src="./image/icon/stars.svg" alt="rating 5 stars" class="testimonials__rating">
+                  </div>
+                </div>
+                <div class="testimonials__item">
+                  <p class="testimonials__text">
+                    Convenient iOS application (iPhone, iPad) for showcasing artworks in interiors. Artmywall makes it very easy to put your artwork on your walls: choose a wall, upload your work, choose a frame and save the finished image in high resolution
+                  </p>
+                  <div class="testimonials__info">
+                    <p class="testimonials__user">@Uartist83</p>
+                    <img src="./image/icon/stars.svg" alt="rating 5 stars" class="testimonials__rating">
+                  </div>
+                </div>
+                <div class="testimonials__item">
+                  <p class="testimonials__text">
+                    Just started using the app today and exploring all the different backgrounds. It is simple to use and there are lots of options. It is also a competitively priced product as some of these apps are quite expensive. I chose this app because I wanted something easy to use and cost-effective. I would recommend.
+                  </p>
+                  <div class="testimonials__info">
+                    <p class="testimonials__user">@mizzartz</p>
+                    <img src="./image/icon/stars.svg" alt="rating 5 stars" class="testimonials__rating">
+                  </div>
+                </div>
+                <div class="testimonials__item">
+                  <p class="testimonials__text">
+                    I am absolutely loving my new app Artmywall which lets me display my paintings in room settings. It is way better than having to push the settee around the house!! 😀
+                  </p>
+                  <div class="testimonials__info">
+                    <p class="testimonials__user">
+                      @juliatannerart
+                    </p>
+                    <img src="./image/icon/stars.svg" alt="rating 5 stars" class="testimonials__rating">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide testimonials__desktop">
+              <div class="testimonials__content">
+                <div class="testimonials__item">
+                  <p class="testimonials__text">
+                    Love using the spaces to visualise my work.
+      Also love the support. Thank You!🙏💗
+                  </p>
+                  <div class="testimonials__info">
+                    <p class="testimonials__user">
+                      @Dg1463
+                    </p>
+                    <img src="./image/icon/stars.svg" alt="rating 5 stars" class="testimonials__rating">
+                  </div>
+                </div>
+                <div class="testimonials__item">
+                  <p class="testimonials__text">
+                    Super app! Finally I have a possibility to present my works.
+                    The interiors are very cool. Thank you.
+                  </p>
+                  <div class="testimonials__info">
+                    <p class="testimonials__user">@Mamekina</p>
+                    <img src="./image/icon/stars.svg" alt="rating 5 stars" class="testimonials__rating">
+                  </div>
+                </div>
+                <div class="testimonials__item">
+                  <p class="testimonials__text">
+                    Really helpful for my instagram art Account. It looks so much better with art my wall
+                  </p>
+                  <div class="testimonials__info">
+                    <p class="testimonials__user">@Sabrina Diana Art</p>
+                    <img src="./image/icon/stars.svg" alt="rating 5 stars" class="testimonials__rating">
+                  </div>
+                </div>
+                <div class="testimonials__item">
+                  <p class="testimonials__text">
+                    Very smart and useful app. Highly recommend for all artistas, galleries etc.
+                  </p>
+                  <div class="testimonials__info">
+                    <p class="testimonials__user">@Lor Salvator</p>
+                    <img src="./image/icon/stars.svg" alt="rating 5 stars" class="testimonials__rating">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide testimonials__desktop">
+              <div class="testimonials__content">
+                <div class="testimonials__item">
+                  <p class="testimonials__text">
+                    Very easy to use and enables you to present your in real settings for your audience!
+                  </p>
+                  <div class="testimonials__info">
+                    <p class="testimonials__user">@reyhangulecart</p>
+                    <img src="./image/icon/stars.svg" alt="rating 5 stars" class="testimonials__rating">
+                  </div>
+                </div>
+                <div class="testimonials__item">
+                  <p class="testimonials__text">
+                    I've been rocking with this app for awhile, thank you for this unexpected feature 🙏
+                  </p>
+                  <div class="testimonials__info">
+                    <p class="testimonials__user">@johnsondonart</p>
+                    <img src="./image/icon/stars.svg" alt="rating 5 stars" class="testimonials__rating">
+                  </div>
+                </div>
+                <div class="testimonials__item">
+                  <p class="testimonials__text">
+                    Obsessed with my Artmywall app! Finally an app with rooms that have COLOR 🙏 I need this pink sofa!
+                  </p>
+                  <div class="testimonials__info">
+                    <p class="testimonials__user">@nikistearman</p>
+                    <img src="./image/icon/stars.svg" alt="rating 5 stars" class="testimonials__rating">
+                  </div>
+                </div>
+                <div class="testimonials__item">
+                  <p class="testimonials__text">
+                    The new backgrounds and updates are stellar! Thanks so much, Artmywall!
+                  </p>
+                  <div class="testimonials__info">
+                    <p class="testimonials__user">@kevinumbelphotography</p>
+                    <img src="./image/icon/stars.svg" alt="rating 5 stars" class="testimonials__rating">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination testimonials__pagination"></div>
+
+        </div>
+        <div class="testimonials__navigation">
+          <div class="swiper-button-prev-custom">
+            <img src="./image/icon/arrow-left.svg" alt="arrow left">
+
+          </div>
+          <div class="swiper-button-next-custom">
+            <img src="./image/icon/arrow-right.svg" alt="arrow right">
+          </div>
+        </div>
+       </div>
+      </div>
+    </section>
+
+    <section class="app__section bring">
+      <div class="container">
+        <div class="bring__content">
+          <h2 class="bring__title">
+            Bring your Art to life with <span class="bring__title--red">Artmywall</span>
+          </h2>
+          <p class="bring__text">
+            You don’t need complex tools like photoshop anymore and won’t run into copyright issues by trying to use
+            interior mockups from the internet
+          </p>
+        </div>
+
+        <div class="bring__image">
+          <img src="./image/phone/phones.png" alt="image-phones" class="bring__image-phones">
+        </div>
+
+      </div>
+    </section>
+
+    <section class="app__section multiple">
+<div class="container">
+        <h2 class="multiple__title">
+          Multiple artworks
+        </h2>
+  
+        <p class="multiple__text">
+          Display several artworks at once on one wall in free order. Create your own gallery wall or virtual show
+        </p>
+      </div>
+        <div class="container multiple__container"></div>
+        <img src="./image/gallery.png" alt="gallery" class="multiple__image">
+      </div>
+
+    </section>
+
+    <section class="app__section subscribe ">
+      <div class="container subscribe__container">
+        <div class="subscribe__content">
+          <h2 class="subscribe__title">
+            Subscribe to our <br class="subscribe__new-line"> newsletter
+          </h2>
+  
+          <p class="subscribe__text">
+            to stay updated about new<br class="subscribe__new-line"> functionality and <br>
+            upcoming events 
+          </p>
+  
+          <form action="" class="subscribe__form">
+            <input placeholder="Enter your Email" type="text" class="subscribe__input">
+            <button class="subscribe__button">
+              Subcribe Now
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__content">
+        <a class="footer__logo" href="№">Artmywall</a>
+        <div class="footer__download">
+          <h4 class="footer__download-title">Download Now!</h4>
+          <a href="#" class="footer__download-link">
+            <img src="./image/icon/Iphone.svg" alt="icon phone" class="footer__download-icon">
+            <p class="footer__download-text">
+              Download on the
+              <span class="footer__download-text--bigger">
+                App Store
+              </span>
+            </p>
+          </a>
+
+        </div>
+        <div class="footer__contact">
+          <h5 class="footer__contact-title">Contacts</h5>
+          <div class="footer__contact-icons">
+            <a href="#" class="footer__contact-link footer__contact-link--gmail">
+              <img src="./image/icon/gmail.svg" alt="gmail" class="footer__contact-icon">
+            </a>
+            <a href="#" class="footer__contact-link">
+              <img class="footer__contact-icon" src="./image/icon/tiktok.svg" alt="TikTok">
+            </a>
+            <a href="#" class="footer__contact-link">
+              <img src="./image/icon/instagram.svg" alt="instagram" class="footer__contact-icon">
+            </a>
+            <a href="#" class="footer__contact-link">
+              <img src="./image/icon/pinterest.svg" alt="pinterest" class="footer__contact-icon">
+
+            </a>
+            <a href="#" class="footer__contact-link">
+              <img src="./image/icon/youtube.svg" alt="youtube" class="footer__contact-icon">
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__page">
+        <ul class="footer__page-list">
+          <li> <a href="./terms.html" class="footer__page-link">Terms of Use</a>
+          </li>
+          <li> <a href="./policy.html" class="footer__page-link">Privacy Policy</a>
+          </li>
+          <li> <a href="./index.html" class="footer__page-link">Support</a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+    <hr class="footer__line">
+
+    <p class="footer__reserved">
+      © WALL Portfolio. All rights reserved.
+    </p>
+  </footer>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <script>
+    const swiper = new Swiper('.swiper', {
+  direction: 'horizontal',
+  loop: true,
+  spaceBetween: 20,
+  pagination: {
+    el: '.swiper-pagination',
+    dynamicBullets: true,
+  },
+
+  navigation: {
+                nextEl: '.swiper-button-next-custom',
+                prevEl: '.swiper-button-prev-custom',
+            },
+
+});
+  </script>
+
+</body>
+
+</html>

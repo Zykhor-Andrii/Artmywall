@@ -1,0 +1,1349 @@
+@import "./utils/reset";
+@import "./utils/mixins";
+@import "./blok/container.scss";
+html {
+  overflow-x: hidden;
+}
+.swiper {
+  width: 100%;
+  padding-bottom: 40px;
+  // height: 555px;
+
+  &-button-next-custom {
+    padding-left: 32px;
+    cursor: pointer
+
+  }
+
+  &-button-prev-custom {
+    cursor: pointer;
+  }
+
+  &-slide {
+    width: 343px;
+    height: 390px;
+  }
+
+  &-pagination {
+    position: relative;
+  }
+}
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: #ff4800;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #f8f9fa;
+}
+
+.main {
+  padding: 100px 0;
+}
+
+.app {
+  overflow-x: hidden;
+  width: 100vw;
+
+  &__section {
+    padding-bottom: 60px;
+
+    @include onDesktop() {
+      padding-bottom: 100px;
+    }
+  }
+}
+
+.header {
+  width: 100vw;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column-reverse;
+  position: relative;
+
+  @include onDesktop() {
+    // flex-direction: row-reverse;
+    display: block;
+    height: 800px;
+    background-color: #fff;
+  }
+
+  &__gradient {
+    display: none;
+
+    @include onDesktop() {
+      display: block;
+      position: absolute;
+      width: 156px;
+      height: 156px;
+      left: 55px;
+      bottom: -24px;
+      border-radius: 50%;
+      background: rgba(255, 72, 0, 0.3);
+
+      box-shadow: 0 0 160px 90px rgba(255, 72, 0, 0.2),
+        /* зовнішня розсіяна тінь */ 1px 1px 83px 7px rgba(255, 255, 255, 0.6)
+          inset,
+        1px 1px 83px 1px rgba(255, 255, 255, 0.7) inset,
+        1px 1px 83px 7px rgba(255, 72, 0, 0.4) inset;
+      // 1px 1px 88px 7px rgba(255, 255, 255, 0,5) inset;
+
+      z-index: 0;
+    }
+  }
+
+  &__carusel {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    margin-top: 32px;
+    position: relative;
+
+    @include onDesktop() {
+      flex-direction: row;
+      position: absolute;
+      top: 0;
+      right: 60px;
+      gap: 10px;
+      z-index: 0;
+    }
+
+    &-blur {
+      display: none;
+
+      @include onDesktop() {
+        display: block;
+        position: absolute;
+        height: 120px;
+        width: 100%;
+        top: -32px;
+        z-index: 1;
+        backdrop-filter: blur(4px);
+      }
+    }
+
+    &-row {
+      // height: 513px;
+      display: flex;
+      flex-direction: row;
+      gap: 5px;
+      animation-name: moveLeft;
+      animation-duration: 17s;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+      animation-fill-mode: backwards;
+
+      @include onDesktop() {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      &--revers {
+        flex-direction: row;
+
+        transform: translateX(-100%);
+        animation-name: moveRigth;
+        animation-duration: 17s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-fill-mode: backwards;
+
+        @include onDesktop() {
+          transform: translateY(-100%);
+          flex-direction: column;
+        }
+      }
+
+      @keyframes moveLeft {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-100%);
+        }
+      }
+
+      @include onDesktop() {
+        @keyframes moveLeft {
+          0% {
+            transform: translateY(-2%);
+          }
+          100% {
+            transform: translateY(-63%);
+          }
+        }
+      }
+
+      @keyframes moveRigth {
+        0% {
+          transform: translateX(100);
+        }
+        100% {
+          transform: translateX(0);
+        }
+      }
+
+      @include onDesktop() {
+        @keyframes moveRigth {
+          0% {
+            transform: translateY(-62%);
+          }
+          100% {
+            transform: translateY(-2%);
+          }
+        }
+      }
+    }
+
+    &-item {
+      width: 123px;
+      height: 169px;
+
+      display: flex;
+      flex-direction: column;
+      background: #e9ecef;
+      border-radius: 16px;
+
+      @include onDesktop() {
+        width: 208px;
+        height: 286px;
+        background: #e9ecef;
+      }
+    }
+
+    &-img {
+      width: 119px;
+      height: 124px;
+
+      padding: 2px 2px 5px 2px;
+      object-fit: cover;
+
+      @include onDesktop() {
+        width: 200px;
+        height: 211px;
+        padding: 4px 4px 8px 4px;
+      }
+    }
+
+    &-text {
+      font-size: 11px;
+      font-weight: 500;
+      line-height: 13.41px;
+      margin-bottom: 3px;
+      white-space: nowrap;
+
+      @include onDesktop() {
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 8px;
+      }
+    }
+
+    &-name {
+      font-size: 11px;
+      font-weight: 600;
+      line-height: 13.41px;
+      white-space: nowrap;
+
+      @include onDesktop() {
+        font-size: 14px;
+        line-height: 24px;
+      }
+
+      &--small {
+        font-size: 9px;
+
+        @include onDesktop() {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  &__top {
+    // height: 44px;
+    padding: 52px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    @include onDesktop() {
+      padding: 0;
+      height: 132px;
+      margin-bottom: 60px;
+    }
+  }
+
+  &__logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-image {
+      width: 42px;
+      margin-right: 8px;
+
+      @include onDesktop() {
+        width: 80px;
+        height: 70px;
+        margin-right: 16px;
+      }
+    }
+
+    &-name {
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 21.6px;
+      text-align: center;
+      position: relative;
+
+      @include onDesktop() {
+        font-size: 24px;
+      }
+    }
+  }
+
+  &__portfolio {
+    text-decoration: none;
+
+    &-content {
+      display: flex;
+      border: 1px solid rgba(33, 37, 41, 1);
+      height: 44px;
+      border-radius: 16px;
+      padding: 0 16px;
+      align-items: center;
+      position: relative;
+      background: #f8f9fa;
+      color: #212529;
+    }
+
+    &-logo {
+      width: 22px;
+      height: 20px;
+    }
+
+    &-name {
+      padding: 0 6px 0 4px;
+
+      @include onDesktop() {
+      }
+    }
+
+    &-arrow {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  &__content {
+    position: relative;
+
+    @include onDesktop() {
+      width: 454px;
+    }
+  }
+
+  &__show {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 28.8px;
+    margin-bottom: 18px;
+    color: #212529;
+
+    @include onDesktop() {
+      font-size: 32px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 57.6px;
+    color: #ff4800;
+
+    @include onDesktop() {
+      font-size: 64px;
+    }
+  }
+
+  &__description {
+    position: relative;
+    z-index: 1;
+
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 23.76px;
+    color: #495057;
+    margin-bottom: 20px;
+
+    @include onDesktop() {
+      font-size: 24px;
+      line-height: 31px;
+    }
+  }
+
+  &__link-app {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 1);
+    text-decoration: none;
+
+    @include onDesktop() {
+      width: 253px;
+    }
+  }
+
+  &__link-content {
+    display: flex;
+    padding: 8px 0;
+    color: #ffffff;
+  }
+
+  &__link-logo {
+    margin-right: 14px;
+  }
+
+  &__link-text {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19.6px;
+    position: relative;
+
+    @include onDesktop() {
+      font-size: 16px;
+    }
+
+    &--biger {
+      font-size: 16px;
+      font-weight: 600;
+
+      @include onDesktop() {
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+.step {
+  // &__container {
+  //   // display: none;
+  //   // padding: 0;
+  //   // width: 100%;
+  // }
+
+  &__item {
+    margin-bottom: 58px;
+
+    @include onDesktop() {
+      height: 744px;
+      background-image: url("/image/ellipse/ellips-phone-biger.svg");
+      background-repeat: no-repeat;
+      background-position: right top;
+      // background-size: contain;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 46px;
+
+      &--noellips {
+        height: 485px;
+
+        background-image: none;
+        flex-direction: row-reverse;
+      }
+    }
+  }
+
+  &__info {
+    @include onDesktop() {
+      width: 544px;
+      height: max-content;
+    }
+  }
+
+  &__number {
+    display: flex;
+    align-items: flex-end;
+    padding: 0 12px;
+
+    margin-bottom: 20px;
+
+    &-img {
+      margin-right: 12px;
+
+      @include onDesktop() {
+        margin-right: 15px;
+        width: 93px;
+        height: 66px;
+      }
+    }
+
+    &-text {
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 24px;
+      color: #ced4da;
+      padding: 0 12px;
+
+      @include onDesktop() {
+        font-size: 32px;
+        line-height: 38.4px;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 36px;
+    color: #ff4800;
+    margin-bottom: 16px;
+    padding: 0 12px;
+
+    @include onDesktop() {
+      padding: 36px 0 24px 0;
+      font-size: 36px;
+      line-height: 43.2px;
+    }
+  }
+
+  &__text {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22.4px;
+    color: #212529;
+    padding: 0 12px;
+
+    @include onDesktop() {
+      font-size: 18px;
+      line-height: 25.2px;
+    }
+  }
+
+  &__image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../image/carusel/Elements.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 644px;
+
+    &--nobackground {
+      background-image: none;
+      height: 460px;
+
+      @include onDesktop() {
+        padding-left: 147px;
+      }
+    }
+
+    @include onDesktop() {
+      background-image: none;
+      justify-self: center;
+    }
+
+    &-wrapper {
+      position: relative;
+      width: 201px;
+      height: 409px;
+
+      @include onDesktop() {
+        width: 249px;
+        height: 504px;
+      }
+    }
+
+    &-phone {
+      position: absolute;
+      z-index: 1;
+      width: 201px;
+      height: 409px;
+
+      @include onDesktop() {
+        width: 249px;
+        height: 504px;
+
+        &--position {
+          position: absolute;
+          top: 65px;
+          right: 199px;
+        }
+      }
+    }
+
+    // &-shadow {
+
+    //   width: 163px;
+    //   height: 163px;
+    //   position: absolute;
+    //   top: 50%;
+    //   left: 50%;
+    //   transform: translate(-50%, -50%);
+    //   // background: rgba(255, 72, 0, 1);
+    //   // opacity: 0;
+
+    //   border-radius: 50%;
+
+    //   box-shadow:
+    //   0 0 99px 133px rgba(255, 72, 0, 0.2);
+
+    // }
+  }
+
+  &__video {
+    position: absolute;
+    width: 95%;
+    height: 96%;
+    z-index: 2;
+    top: 8px;
+    left: 6px;
+    // transform: translate(-50%, -50%);
+    border-radius: 32px;
+
+    @include onDesktop() {
+      top: 75px;
+      left: -193px;
+    }
+
+    &--anomal {
+      top: 8px;
+      left: 6px;
+    }
+  }
+}
+
+.testimonials {
+  background-color: #fff;
+  border-radius: 44px;
+  height: 554px;
+  // width: 100vw;
+  padding-bottom: 70px;
+
+  @include onDesktop() {
+    height: 700px;
+  }
+
+  &__navigation {
+    display: none;
+
+    @include onDesktop() {
+      display: block;
+      display: flex;
+      justify-content: center;
+      padding: 32px 0 0 0;
+    }
+  }
+
+  &__mobale {
+    @include onDesktop() {
+      display: none !important;
+    }
+  }
+
+  &__desktop {
+    display: none !important;
+     @include onDesktop() {
+      display: block !important;
+     }
+  }
+
+  &__pagination {
+    position: absolute;
+    display: block;
+    padding-top: 32px !important;
+
+    // bottom: -32px !important;
+
+    @include onDesktop() {
+      display: none;
+    }
+  }
+
+  &__title {
+    padding: 48px 0 32px 0;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 36px;
+    text-align: center;
+  }
+
+  &__content {
+    & :first-child {
+      margin-bottom: 8px;
+    }
+
+    @include onDesktop() {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+  }
+
+  &__item {
+    padding: 24px 16px;
+    background: rgba(248, 249, 250, 1);
+    border-radius: 24px;
+
+    @include onDesktop() {
+      width: 524px;
+    }
+  }
+
+  &__text {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19.6px;
+    color: #212529;
+    padding-bottom: 16px;
+
+    @include onDesktop() {
+      font-size: 18px;
+      line-height: 25.2px;
+    }
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__user {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16.8px;
+
+    color: #000000;
+  }
+}
+
+.bring {
+  &__content {
+    margin-bottom: 18px;
+  }
+
+  &__title {
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 39.6px;
+    text-align: center;
+
+    @include onDesktop() {
+      font-size: 36px;
+      margin-bottom: 24px;
+      padding-top: 100px;
+    }
+
+    &--red {
+      color: #ff4800;
+      @include onDesktop() {
+        display: block;
+      }
+    }
+  }
+
+  &__text {
+    display: none;
+
+    @include onDesktop() {
+      display: block;
+      width: 736px;
+      font-size: 24px;
+      text-align: center;
+      margin: auto;
+    }
+  }
+
+  &__image {
+    height: 544px;
+
+    background-image: url("../image/ellipse/ellips-phone.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+
+    @include onDesktop() {
+      background-image: none;
+
+      background-image: url("../image/ellipse/ellips-phone-big.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+    }
+
+    &-phones {
+      width: 343px;
+      height: 256px;
+      margin-top: 158px;
+
+      @include onDesktop() {
+        width: 700px;
+        height: 407px;
+        margin-top: 85px;
+      }
+    }
+  }
+}
+
+.multiple {
+  &__container {
+    padding: 0;
+
+    @include onDesktop() {
+      padding: 0 160px;
+
+    }
+  }
+  text-align: center;
+
+  &__title {
+    font-size: 36px;
+    margin-bottom: 24px;
+  }
+
+  &__text {
+    font-size: 24px;
+    margin-bottom: 32px;
+
+    @include onDesktop() {
+      line-height: 31.68px;
+      width: 736px;
+      margin: auto;
+      margin-bottom: 50px;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    object-fit: cover;
+
+    @include onDesktop() {
+      width: 1120px;
+height: 520px;
+border-radius: 16px;
+
+
+    }
+  }
+}
+
+.subscribe {
+  // height: 410px;
+  text-align: center;
+
+  @include onDesktop() {
+    background-color: none;
+
+  }
+
+  &__new-line {
+    @include onDesktop() {
+      display: none;
+    }
+  }
+
+  &__container {
+    padding: 0;
+
+    @include onDesktop() {
+      padding: 0 160px;
+    }
+  }
+
+  &__content {
+    background-color: rgba(255, 72, 0, 1);
+    border-radius: 24px;
+    @include onDesktop() {
+      height: 376px;
+    }
+  }
+
+  &__title {
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 36px;
+    text-align: center;
+    color: #fff;
+    padding: 48px 0 18px 0;
+  }
+
+  &__text {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 23.76px;
+    text-align: center;
+    color: #fff;
+
+    @include onDesktop() {
+      padding-bottom: 26px;
+    }
+  }
+
+  &__form {
+    padding: 12px;
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 48px;
+
+
+    @include onDesktop() {
+      height: 77px;
+      width: 509px;
+      background-color: #fff;
+      flex-direction: row;
+      justify-content: center;
+      border-radius: 14px;
+      padding-bottom: 0;
+      margin: auto;
+    }
+  }
+
+  &__input {
+    width: 319px;
+    height: 48px;
+
+    border-radius: 8px;
+    margin-bottom: 12px;
+    padding-left: 16px;
+    outline: none;
+    border: none;
+
+    @include onDesktop() {
+      width: 509px;
+      height: 48px;
+      border: 1px solid #b0b0b0;
+      margin-bottom: 0;
+      padding-left: 0;
+      margin-right: 12px;
+    }
+
+    &::placeholder {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px;
+
+      @include onDesktop() {
+        padding-left: 28px;
+      }
+    }
+  }
+
+  &__button {
+    width: 169px;
+    height: 52px;
+    border-radius: 8px;
+    outline: none;
+
+    font-family: Source Sans Pro;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    border: none;
+    color: #212529;
+
+    @include onDesktop() {
+      background: #ff4800;
+      width: 191px;
+      height: 53px;
+      color: #ffffff;
+    }
+  }
+}
+
+.footer {
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include onDesktop() {
+      flex-direction: row;
+      justify-content: space-between;
+      margin-bottom: 54px;
+    }
+  }
+
+  &__logo {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #ff4800;
+    margin-bottom: 24px;
+
+    @include onDesktop() {
+      font-size: 32px;
+      margin-bottom: 0;
+    }
+  }
+
+  &__download {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 24px;
+
+    @include onDesktop() {
+      order: 3;
+      margin-bottom: 0;
+    }
+
+    &-title {
+      margin-bottom: 24px;
+
+      @include onDesktop() {
+        font-size: 24px;
+      }
+    }
+
+    &-link {
+      width: 211px;
+      height: 56px;
+      border-radius: 10px;
+      background: rgba(0, 0, 0, 1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+
+      @include onDesktop() {
+        width: 245px;
+        height: 61px;
+      }
+
+
+    }
+
+    &-icon {
+      margin-right: 8px;
+    }
+
+    &-text {
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 16.8px;
+
+      &--bigger {
+        display: block;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 19.2px;
+        text-align: center;
+      }
+    }
+  }
+
+  &__contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 32px;
+
+    @include onDesktop() {
+      padding-left: 60px;
+    }
+
+    &-link--gmail {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 32px;
+      height: 32px;
+      background-color: #000000;
+      border-radius: 6px;
+    }
+
+    &-title {
+      // font-family: Source Sans Pro;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 22.63px;
+      margin-bottom: 20px;
+
+      @include onDesktop() {
+        font-size: 24px;
+        margin-bottom: 24px;
+      }
+
+
+    }
+
+    &-icons {
+      width: 224px;
+      height: 32px;
+
+      display: flex;
+      justify-content: space-between;
+
+      @include onDesktop() {
+        width: 256px;
+      }
+    }
+  }
+
+  &__page {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 24px;
+
+    &-list {
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      width: 293px;
+
+      @include onDesktop() {
+        width: 361px;
+      }
+    }
+
+    &-link {
+      color: #212529;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 19.6px;
+
+      @include onDesktop() {
+        font-size: 18px;
+      }
+
+
+    }
+  }
+
+  &__line {
+    border: 1px solid rgba(206, 212, 218, 1);
+    margin-bottom: 16px;
+  }
+
+  &__reserved {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16.8px;
+    text-align: center;
+    color: #495057;
+    margin-bottom: 24px;
+
+    @include onDesktop() {
+      font-size: 14px;
+    }
+  }
+}
+
+.policy {
+  &__header {
+    height: max-content;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: #212529;
+  }
+
+  &__main {
+    margin-bottom: 26px;
+
+    @include onDesktop() {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__item {
+    padding-bottom: 24px;
+    @include onDesktop() {
+      padding-bottom: 32px;
+    }
+  }
+
+  &__title {
+    padding-bottom: 16px;
+    text-align: center;
+    @include onDesktop() {
+    }
+  }
+
+  &__container {
+    @include onDesktop() {
+      padding: 0 400px;
+    }
+  }
+
+  &__text {
+    &--section {
+      margin-bottom: 14px;
+
+      @include onDesktop() {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__main-title {
+font-size: 36px;
+font-weight: 500;
+text-align: center;
+margin-bottom: 24px;
+
+@include onDesktop() {
+  font-size: 48px;
+  margin-bottom: 24px;
+}
+  }
+
+  &__update {
+font-size: 18px;
+font-weight: 400;
+text-align: center;
+color: #495057;
+margin-bottom: 32px;
+
+@include onDesktop() {
+font-size: 24px;
+margin-bottom: 62px;
+}
+
+  }
+}
+
+
+.contact {
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+
+  &__header {
+    @include onDesktop() {
+      height: 121px;
+      margin-bottom: 0;
+    }
+  }
+
+  &__br {
+    @include onDesktop() {
+      display: none;
+    }
+  }
+
+  &__wrapper {
+    margin-bottom: 28px;
+
+    @include onDesktop() {
+      margin-top: 138px;
+
+    }
+  }
+
+  &__content {
+    @include onDesktop() {
+      display: flex;
+      margin-bottom: 70px;
+    }
+  }
+
+  &__title {
+font-size: 40px;
+font-weight: 500;
+line-height: 49.6px;
+text-align: left;
+color: #000000;
+margin-bottom: 10px;
+
+@include onDesktop() {
+  font-size: 64px;
+  margin-bottom: 16px;
+}
+
+  }
+
+  &__text {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 23.76px;
+    text-align: left;
+    margin-bottom: 12px;
+
+    @include onDesktop() {
+      font-size: 24px;
+      margin-bottom: 24px;
+    }
+  }
+
+  &__button {
+    width: 223px;
+height: 53px;
+border-radius: 10px;
+background: #FF4800;
+font-size: 16px;
+font-weight: 600;
+line-height: 21.12px;
+outline: none;
+border: none;
+color: #ffffff;
+  }
+
+  &__img-mobile {
+    width: 351px;
+    height: 310px;
+    margin-left: 31px;
+
+    @include onDesktop() {
+      display: none;
+    }
+  }
+
+  &__img-think {
+
+    @include onDesktop() {
+      position: absolute;
+      top: 172px;
+      right: 182px;
+    }
+
+  }
+
+  &__image-wrapper {
+    display: none;
+    @include onDesktop() {
+      position: relative;
+      margin-left: 63px;
+      display: block;
+    }
+
+  }
+
+  &__circle {
+    position: absolute;
+    width: 601px;
+height: 601px;
+top: 86px;
+right: -340px;
+border-radius: 50%;
+background: #FEAE8E;
+z-index: -1;
+overflow: hidden;
+
+@include onDesktop() {
+  width: 1455px;
+height: 1455px;
+top: -198px;
+right: -671px;
+
+}
+  }
+}
