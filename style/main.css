@@ -416,6 +416,14 @@ body {
   }
 }
 
+.step__container {
+  padding: 0;
+}
+@media (min-width: 1020px) {
+  .step__container {
+    padding: 0 160px;
+  }
+}
 .step__item {
   margin-bottom: 58px;
 }
@@ -1070,6 +1078,9 @@ body {
   }
 }
 
+.policy {
+  background: #F8F9FA;
+}
 .policy__header {
   height: -moz-max-content;
   height: max-content;
