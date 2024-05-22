@@ -83,11 +83,10 @@ body {
       background: rgba(255, 72, 0, 0.3);
 
       box-shadow: 0 0 160px 90px rgba(255, 72, 0, 0.2),
-        /* зовнішня розсіяна тінь */ 1px 1px 83px 7px rgba(255, 255, 255, 0.6)
+         1px 1px 83px 7px rgba(255, 255, 255, 0.6)
           inset,
         1px 1px 83px 1px rgba(255, 255, 255, 0.7) inset,
         1px 1px 83px 7px rgba(255, 72, 0, 0.4) inset;
-      // 1px 1px 88px 7px rgba(255, 255, 255, 0,5) inset;
 
       z-index: 0;
     }
@@ -124,7 +123,6 @@ body {
     }
 
     &-row {
-      // height: 513px;
       display: flex;
       flex-direction: row;
       gap: 5px;
@@ -138,6 +136,8 @@ body {
       @include onDesktop() {
         flex-direction: column;
         gap: 10px;
+        animation-duration: 30s;
+
       }
 
       &--revers {
@@ -154,6 +154,8 @@ body {
         @include onDesktop() {
           transform: translateY(-100%);
           flex-direction: column;
+          animation-duration: 30s;
+
         }
       }
 
@@ -584,24 +586,6 @@ body {
         }
       }
     }
-
-    // &-shadow {
-
-    //   width: 163px;
-    //   height: 163px;
-    //   position: absolute;
-    //   top: 50%;
-    //   left: 50%;
-    //   transform: translate(-50%, -50%);
-    //   // background: rgba(255, 72, 0, 1);
-    //   // opacity: 0;
-
-    //   border-radius: 50%;
-
-    //   box-shadow:
-    //   0 0 99px 133px rgba(255, 72, 0, 0.2);
-
-    // }
   }
 
   &__video {
@@ -662,11 +646,9 @@ body {
   }
 
   &__pagination {
-    position: absolute;
+    position: relative !important;
     display: block;
     padding-top: 32px !important;
-
-    // bottom: -32px !important;
 
     @include onDesktop() {
       display: none;
@@ -731,6 +713,14 @@ body {
 }
 
 .bring {
+&__container {
+  padding: 0;
+
+  @include onDesktop() {
+    padding: 0 160px;
+  }
+}
+
   &__content {
     margin-bottom: 18px;
   }
@@ -740,6 +730,7 @@ body {
     font-weight: 600;
     line-height: 39.6px;
     text-align: center;
+    padding-top: 60px;
 
     @include onDesktop() {
       font-size: 36px;
@@ -772,7 +763,7 @@ body {
 
     background-image: url("../image/ellipse/ellips-phone.png");
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: 100% 100%;
     display: flex;
     justify-content: center;
 
@@ -786,9 +777,11 @@ body {
     }
 
     &-phones {
-      width: 343px;
+      // width: calc(100% - 32px) ;
       height: 256px;
+      padding: 0 16px;
       margin-top: 158px;
+      // object-fit: cover;
 
       @include onDesktop() {
         width: 700px;
@@ -1153,6 +1146,8 @@ border-radius: 16px;
 
   &__header {
     height: max-content;
+    background: #F8F9FA;
+
   }
 
   &__link {
@@ -1230,11 +1225,23 @@ margin-bottom: 62px;
   position: relative;
   overflow: hidden;
   width: 100vw;
+  background: #F8F9FA;
+
 
   &__header {
+    background: #F8F9FA;
+
     @include onDesktop() {
       height: 121px;
       margin-bottom: 0;
+    }
+
+    position: relative;
+    // z-index: 0;
+
+    &--content {
+     position: relative;
+     z-index: 2;
     }
   }
 
@@ -1254,9 +1261,13 @@ margin-bottom: 62px;
   }
 
   &__content {
+    position: relative;
+    z-index: 1;
+
     @include onDesktop() {
       display: flex;
       margin-bottom: 70px;
+
     }
   }
 
@@ -1290,15 +1301,15 @@ margin-bottom: 10px;
 
   &__button {
     width: 223px;
-height: 53px;
-border-radius: 10px;
-background: #FF4800;
-font-size: 16px;
-font-weight: 600;
-line-height: 21.12px;
-outline: none;
-border: none;
-color: #ffffff;
+     height: 53px;
+     border-radius: 10px;
+     background: #FF4800;
+     font-size: 16px;
+     font-weight: 600;
+     line-height: 21.12px;
+     outline: none;
+     border: none;
+     color: #ffffff;
   }
 
   &__img-mobile {
@@ -1331,6 +1342,11 @@ color: #ffffff;
 
   }
 
+  &__footer--position {
+    position: relative;
+    z-index: 1;
+  }
+
   &__circle {
     position: absolute;
     width: 601px;
@@ -1339,7 +1355,7 @@ top: 86px;
 right: -340px;
 border-radius: 50%;
 background: #FEAE8E;
-z-index: -1;
+z-index: 1;
 overflow: hidden;
 
 @include onDesktop() {
