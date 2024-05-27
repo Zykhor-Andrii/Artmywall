@@ -229,14 +229,14 @@ body {
   font-size: 11px;
   font-weight: 500;
   line-height: 13.41px;
-  margin-bottom: 3px;
+  padding: 0 0 3px 4px;
   white-space: nowrap;
 }
 @media (min-width: 1020px) {
   .header__carusel-text {
     font-size: 16px;
     line-height: 24px;
-    margin-bottom: 8px;
+    padding: 0 0 8px 8px;
   }
 }
 .header__carusel-name {
@@ -244,11 +244,13 @@ body {
   font-weight: 600;
   line-height: 13.41px;
   white-space: nowrap;
+  padding-left: 4px;
 }
 @media (min-width: 1020px) {
   .header__carusel-name {
     font-size: 14px;
     line-height: 24px;
+    padding-left: 8px;
   }
 }
 .header__carusel-name--small {
@@ -280,12 +282,13 @@ body {
 }
 .header__logo-image {
   width: 42px;
+  height: 37px;
   margin-right: 8px;
 }
 @media (min-width: 1020px) {
   .header__logo-image {
-    width: 80px;
-    height: 70px;
+    width: 64px;
+    height: 56px;
     margin-right: 16px;
   }
 }
@@ -314,6 +317,11 @@ body {
   position: relative;
   background: #f8f9fa;
   color: #212529;
+}
+@media (min-width: 1020px) {
+  .header__portfolio-content {
+    border: none;
+  }
 }
 .header__portfolio-logo {
   width: 22px;
@@ -356,6 +364,7 @@ body {
 @media (min-width: 1020px) {
   .header__title {
     font-size: 64px;
+    margin-bottom: 24px;
   }
 }
 .header__description {
@@ -371,6 +380,7 @@ body {
   .header__description {
     font-size: 24px;
     line-height: 31px;
+    width: 544px;
   }
 }
 .header__link-app {
@@ -432,9 +442,9 @@ body {
 @media (min-width: 1020px) {
   .step__item {
     height: 744px;
-    background-image: url("/image/ellipse/ellips-phone-biger.svg");
+    background-image: url("../image/ellipse/ellips-phone-biger.svg");
     background-repeat: no-repeat;
-    background-position: right top;
+    background-position: calc(100% + 55px) top;
     display: flex;
     justify-content: space-between;
     margin-bottom: 46px;
@@ -486,8 +496,7 @@ body {
   font-weight: 600;
   line-height: 36px;
   color: #ff4800;
-  margin-bottom: 16px;
-  padding: 0 12px;
+  padding-bottom: 16px;
 }
 @media (min-width: 1020px) {
   .step__title {
@@ -501,7 +510,6 @@ body {
   font-weight: 400;
   line-height: 22.4px;
   color: #212529;
-  padding: 0 12px;
 }
 @media (min-width: 1020px) {
   .step__text {
@@ -559,39 +567,56 @@ body {
   }
   .step__image-phone--position {
     position: absolute;
-    top: 65px;
-    right: 199px;
+    top: 5px;
+    right: 149px;
   }
 }
 .step__video {
   position: absolute;
-  width: 95%;
-  height: 96%;
+  height: 395px;
   z-index: 2;
-  top: 8px;
-  left: 6px;
-  border-radius: 32px;
+  margin: 0 0 0 4.5px;
+  top: 7px;
+  left: 5px;
+  border-radius: 25px;
+  pointer-events: none;
 }
 @media (min-width: 1020px) {
   .step__video {
-    top: 75px;
-    left: -193px;
+    margin: 0 0 0 7.7px;
+    width: 223px;
+    height: 483px;
+    top: 14px;
+    left: -143px;
   }
 }
-.step__video--anomal {
-  top: 8px;
-  left: 6px;
+@media (min-width: 1020px) {
+  .step__video--anomal {
+    top: 9px;
+    left: 5px;
+  }
 }
 
 .testimonials {
   background-color: #fff;
   border-radius: 44px;
-  height: 554px;
-  padding-bottom: 70px;
 }
 @media (min-width: 1020px) {
   .testimonials {
     height: 700px;
+  }
+}
+@media (min-width: 1020px) {
+  .testimonials__mobile-swiper {
+    display: none;
+  }
+}
+.testimonials__desktop-swiper {
+  display: none;
+}
+@media (min-width: 1020px) {
+  .testimonials__desktop-swiper {
+    display: block;
   }
 }
 .testimonials__navigation {
@@ -796,10 +821,32 @@ body {
 
 .subscribe {
   text-align: center;
+  display: flex;
+  justify-content: center;
 }
 @media (min-width: 1020px) {
   .subscribe {
     background-color: none;
+  }
+}
+.subscribe__desktop {
+  display: none;
+}
+@media (min-width: 1020px) {
+  .subscribe__desktop {
+    display: block;
+    width: 1120px;
+    border: none !important;
+    border-radius: 24px !important;
+  }
+}
+.subscribe__mobile {
+  display: block;
+  border-radius: 24px !important;
+}
+@media (min-width: 1020px) {
+  .subscribe__mobile {
+    display: none;
   }
 }
 @media (min-width: 1020px) {
@@ -962,10 +1009,16 @@ body {
 }
 .footer__download-title {
   margin-bottom: 24px;
+  font-family: "Source Sans Pro", sans-serif;
+  color: #212529;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
 }
 @media (min-width: 1020px) {
   .footer__download-title {
     font-size: 24px;
+    font-family: "Montserrat", sans-serif;
   }
 }
 .footer__download-link {
@@ -1021,6 +1074,7 @@ body {
   border-radius: 6px;
 }
 .footer__contact-title {
+  font-family: "Source Sans Pro", sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 22.63px;
@@ -1028,6 +1082,7 @@ body {
 }
 @media (min-width: 1020px) {
   .footer__contact-title {
+    font-family: "Montserrat", sans-serif;
     font-size: 24px;
     margin-bottom: 24px;
   }

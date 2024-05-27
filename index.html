@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
   <title>Document</title>
   <link rel="stylesheet" href="./style/main.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -131,8 +132,11 @@
         </div>
       </div>
     </div>
-    <div class="container">
-      <div class="header__top">
+
+    <div>
+      <div class="header__top-wrapper">
+        <div class="container">
+          <div class="header__top">
         <div class="header__logo">
           <img class="header__logo-image" src="./image/logo.svg" alt="logo">
           <p class="header__logo-name">Artmywall</p>
@@ -145,6 +149,9 @@
           </div>
         </a>
       </div>
+      </div>
+    </div>
+      <div class="container">
       <div class="header__content">
         <h3 class="header__show">Show Art on Walls </h3>
         <h1 class="header__title">Artmywall</h1>
@@ -166,19 +173,17 @@
         </div>
       </div>
     </div>
-
+  </div>
   </header>
 
-  <script>
+  <!-- <script>
 let translateValue = 0; 
 
 function showSlides() {
   translateValue -= 119; // Зміщення на ширину одного блоку
 
-  // Налаштовуємо зміщення всієї групи блоків
   document.querySelector('.header__carusel-container').style.transform = `translateX(${translateValue}px)`;
 
-  // Переміщуємо перший блок в кінець, щоб забезпечити безперервність
   const firstSlide = document.querySelector('.header__carusel-item');
   firstSlide.parentNode.appendChild(firstSlide);
 
@@ -186,7 +191,7 @@ function showSlides() {
 }
 
 showSlides();
-  </script>
+  </script> -->
 
   <main class="main">
     <section  class="app__section step">
@@ -285,291 +290,313 @@ showSlides();
     <section class="app__section testimonials">
       <div class="container">
         <h2 class="testimonials__title">Testimonials</h2>
-       <div class="testimonials__wrraper">
-        <div class="swiper test mySwiper">
-          <div class="swiper-wrapper">
-
-            <div class="swiper-slide testimonials__mobale">
-              <div class="testimonials__content ">
-                <div class="testimonials__item">
-                  <p class="testimonials__text">
-                    I recommend this app! A real find for artists! Time saving and very clear interface with a bunch of designs for your taste.
-                  </p>
-                  <div class="testimonials__info">
-                    <p class="testimonials__user">
-                      @hi.alinalobanova
+        <div class="testimonials__mobile-swiper">
+          <div class="testimonials__wrraper">
+            <div class="swiper test mySwiper">
+              <div class="swiper-wrapper">
+    
+                <div class="swiper-slide testimonials__mobale">
+                  <div class="testimonials__content ">
+                    <div class="testimonials__item">
+                      <p class="testimonials__text">
+                        I recommend this app! A real find for artists! Time saving and very clear interface with a bunch of designs for your taste.
+                      </p>
+                      <div class="testimonials__info">
+                        <p class="testimonials__user">
+                          @hi.alinalobanova
+                        </p>
+                        <img src="./image/icon/stars.svg" alt="rating 5 stars" class="testimonials__rating">
+                      </div>
+                    </div>
+                    <div class="testimonials__item">
+                      <p class="testimonials__text">
+                        Convenient iOS application (iPhone, iPad) for showcasing artworks in interiors. Artmywall makes it very easy to put your artwork on your walls: choose a wall, upload your work, choose a frame and save the finished image in high resolution
+                      </p>
+                      <div class="testimonials__info">
+                        <p class="testimonials__user">@Uartist83</p>
+                        <img src="./image/icon/stars.svg" alt="rating 5 stars" class="testimonials__rating">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide testimonials__mobale">
+                  <div class="testimonials__content">
+                    <div class="testimonials__item">
+                      <p class="testimonials__text">
+                        Just started using the app today and exploring all the different backgrounds. It is simple to use and there are lots of options. It is also a competitively priced product as some of these apps are quite expensive. I chose this app because I wanted something easy to use and cost-effective. I would recommend.
+                      </p>
+                      <div class="testimonials__info">
+                        <p class="testimonials__user">@mizzartz</p>
+                        <img src="./image/icon/stars.svg" alt="rating 5 stars" class="testimonials__rating">
+                      </div>
+                    </div>
+                    <div class="testimonials__item">
+                      <p class="testimonials__text">
+                        Love using the spaces to visualise my work.
+          Also love the support. Thank You!🙏💗
+                      </p>
+                      <div class="testimonials__info">
+                        <p class="testimonials__user">
+                          @Dg1463
+                        </p>
+                        <img src="./image/icon/stars.svg" alt="rating 5 stars" class="testimonials__rating">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide testimonials__mobale">
+                  <div class="testimonials__content">
+                    <div class="testimonials__item">
+                      <p class="testimonials__text">
+                        I am absolutely loving my new app Artmywall which lets me display my paintings in room settings. It is way better than having to push the settee around the house!! 😀
+                      </p>
+                      <div class="testimonials__info">
+                        <p class="testimonials__user">
+                          @juliatannerart
+                        </p>
+                        <img src="./image/icon/stars.svg" alt="rating 5 stars" class="testimonials__rating">
+                      </div>
+                    </div>
+                    <div class="testimonials__item">
+                      <p class="testimonials__text">
+                        Really helpful for my instagram art Account. It looks so much better with art my wall
+                      </p>
+                      <div class="testimonials__info">
+                        <p class="testimonials__user">@Sabrina Diana Art</p>
+                        <img src="./image/icon/stars.svg" alt="rating 5 stars" class="testimonials__rating">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide testimonials__mobale"> 
+                         <div class="testimonials__content">
+                  <div class="testimonials__item">
+                    <p class="testimonials__text">
+                      Super app! Finally I have a possibility to present my works.
+                      The interiors are very cool. Thank you.
                     </p>
-                    <img src="./image/icon/stars.svg" alt="rating 5 stars" class="testimonials__rating">
+                    <div class="testimonials__info">
+                      <p class="testimonials__user">@Mamekina</p>
+                      <img src="./image/icon/stars.svg" alt="rating 5 stars" class="testimonials__rating">
+                    </div>
                   </div>
-                </div>
-                <div class="testimonials__item">
-                  <p class="testimonials__text">
-                    Convenient iOS application (iPhone, iPad) for showcasing artworks in interiors. Artmywall makes it very easy to put your artwork on your walls: choose a wall, upload your work, choose a frame and save the finished image in high resolution
-                  </p>
-                  <div class="testimonials__info">
-                    <p class="testimonials__user">@Uartist83</p>
-                    <img src="./image/icon/stars.svg" alt="rating 5 stars" class="testimonials__rating">
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide testimonials__mobale">
-              <div class="testimonials__content">
-                <div class="testimonials__item">
-                  <p class="testimonials__text">
-                    Just started using the app today and exploring all the different backgrounds. It is simple to use and there are lots of options. It is also a competitively priced product as some of these apps are quite expensive. I chose this app because I wanted something easy to use and cost-effective. I would recommend.
-                  </p>
-                  <div class="testimonials__info">
-                    <p class="testimonials__user">@mizzartz</p>
-                    <img src="./image/icon/stars.svg" alt="rating 5 stars" class="testimonials__rating">
-                  </div>
-                </div>
-                <div class="testimonials__item">
-                  <p class="testimonials__text">
-                    Love using the spaces to visualise my work.
-      Also love the support. Thank You!🙏💗
-                  </p>
-                  <div class="testimonials__info">
-                    <p class="testimonials__user">
-                      @Dg1463
+                  <div class="testimonials__item">
+                    <p class="testimonials__text">
+                      Very smart and useful app. Highly recommend for all artistas, galleries etc.
                     </p>
-                    <img src="./image/icon/stars.svg" alt="rating 5 stars" class="testimonials__rating">
+                    <div class="testimonials__info">
+                      <p class="testimonials__user">@Lor Salvator</p>
+                      <img src="./image/icon/stars.svg" alt="rating 5 stars" class="testimonials__rating">
+                    </div>
+                  </div>
+                </div></div>
+                <div class="swiper-slide testimonials__mobale">
+                  <div class="testimonials__content">
+                    <div class="testimonials__item">
+                      <p class="testimonials__text">
+                        Very easy to use and enables you to present your in real settings for your audience!
+                      </p>
+                      <div class="testimonials__info">
+                        <p class="testimonials__user">@reyhangulecart</p>
+                        <img src="./image/icon/stars.svg" alt="rating 5 stars" class="testimonials__rating">
+                      </div>
+                    </div>
+                    <div class="testimonials__item">
+                      <p class="testimonials__text">
+                        Obsessed with my Artmywall app! Finally an app with rooms that have COLOR 🙏 I need this pink sofa!
+                      </p>
+                      <div class="testimonials__info">
+                        <p class="testimonials__user">@nikistearman</p>
+                        <img src="./image/icon/stars.svg" alt="rating 5 stars" class="testimonials__rating">
+                      </div>
+                    </div>
                   </div>
                 </div>
+                <div class="swiper-slide testimonials__mobale">
+                  <div class="testimonials__content">
+                    <div class="testimonials__item">
+                      <p class="testimonials__text">
+                        I've been rocking with this app for awhile, thank you for this unexpected feature 🙏
+                      </p>
+                      <div class="testimonials__info">
+                        <p class="testimonials__user">@johnsondonart</p>
+                        <img src="./image/icon/stars.svg" alt="rating 5 stars" class="testimonials__rating">
+                      </div>
+                    </div>
+                    <div class="testimonials__item">
+                      <p class="testimonials__text">
+                        The new backgrounds and updates are stellar! Thanks so much, Artmywall!
+                      </p>
+                      <div class="testimonials__info">
+                        <p class="testimonials__user">@kevinumbelphotography</p>
+                        <img src="./image/icon/stars.svg" alt="rating 5 stars" class="testimonials__rating">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-pagination testimonials__pagination"></div>
+    
+            </div>
+            <div class="testimonials__navigation">
+              <div class="swiper-button-prev-custom">
+                <img src="./image/icon/arrow-left.svg" alt="arrow left">
+    
+              </div>
+              <div class="swiper-button-next-custom">
+                <img src="./image/icon/arrow-right.svg" alt="arrow right">
               </div>
             </div>
-            <div class="swiper-slide testimonials__mobale">
-              <div class="testimonials__content">
-                <div class="testimonials__item">
-                  <p class="testimonials__text">
-                    I am absolutely loving my new app Artmywall which lets me display my paintings in room settings. It is way better than having to push the settee around the house!! 😀
-                  </p>
-                  <div class="testimonials__info">
-                    <p class="testimonials__user">
-                      @juliatannerart
-                    </p>
-                    <img src="./image/icon/stars.svg" alt="rating 5 stars" class="testimonials__rating">
-                  </div>
-                </div>
-                <div class="testimonials__item">
-                  <p class="testimonials__text">
-                    Really helpful for my instagram art Account. It looks so much better with art my wall
-                  </p>
-                  <div class="testimonials__info">
-                    <p class="testimonials__user">@Sabrina Diana Art</p>
-                    <img src="./image/icon/stars.svg" alt="rating 5 stars" class="testimonials__rating">
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide testimonials__mobale"> 
-                     <div class="testimonials__content">
-              <div class="testimonials__item">
-                <p class="testimonials__text">
-                  Super app! Finally I have a possibility to present my works.
-                  The interiors are very cool. Thank you.
-                </p>
-                <div class="testimonials__info">
-                  <p class="testimonials__user">@Mamekina</p>
-                  <img src="./image/icon/stars.svg" alt="rating 5 stars" class="testimonials__rating">
-                </div>
-              </div>
-              <div class="testimonials__item">
-                <p class="testimonials__text">
-                  Very smart and useful app. Highly recommend for all artistas, galleries etc.
-                </p>
-                <div class="testimonials__info">
-                  <p class="testimonials__user">@Lor Salvator</p>
-                  <img src="./image/icon/stars.svg" alt="rating 5 stars" class="testimonials__rating">
-                </div>
-              </div>
-            </div></div>
-            <div class="swiper-slide testimonials__mobale">
-              <div class="testimonials__content">
-                <div class="testimonials__item">
-                  <p class="testimonials__text">
-                    Very easy to use and enables you to present your in real settings for your audience!
-                  </p>
-                  <div class="testimonials__info">
-                    <p class="testimonials__user">@reyhangulecart</p>
-                    <img src="./image/icon/stars.svg" alt="rating 5 stars" class="testimonials__rating">
-                  </div>
-                </div>
-                <div class="testimonials__item">
-                  <p class="testimonials__text">
-                    Obsessed with my Artmywall app! Finally an app with rooms that have COLOR 🙏 I need this pink sofa!
-                  </p>
-                  <div class="testimonials__info">
-                    <p class="testimonials__user">@nikistearman</p>
-                    <img src="./image/icon/stars.svg" alt="rating 5 stars" class="testimonials__rating">
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide testimonials__mobale">
-              <div class="testimonials__content">
-                <div class="testimonials__item">
-                  <p class="testimonials__text">
-                    I've been rocking with this app for awhile, thank you for this unexpected feature 🙏
-                  </p>
-                  <div class="testimonials__info">
-                    <p class="testimonials__user">@johnsondonart</p>
-                    <img src="./image/icon/stars.svg" alt="rating 5 stars" class="testimonials__rating">
-                  </div>
-                </div>
-                <div class="testimonials__item">
-                  <p class="testimonials__text">
-                    The new backgrounds and updates are stellar! Thanks so much, Artmywall!
-                  </p>
-                  <div class="testimonials__info">
-                    <p class="testimonials__user">@kevinumbelphotography</p>
-                    <img src="./image/icon/stars.svg" alt="rating 5 stars" class="testimonials__rating">
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide testimonials__desktop">
-              <div class="testimonials__content">
-                <div class="testimonials__item">
-                  <p class="testimonials__text">
-                    I recommend this app! A real find for artists! Time saving and very clear interface with a bunch of designs for your taste.
-                  </p>
-                  <div class="testimonials__info">
-                    <p class="testimonials__user">
-                      @hi.alinalobanova
-                    </p>
-                    <img src="./image/icon/stars.svg" alt="rating 5 stars" class="testimonials__rating">
-                  </div>
-                </div>
-                <div class="testimonials__item">
-                  <p class="testimonials__text">
-                    Convenient iOS application (iPhone, iPad) for showcasing artworks in interiors. Artmywall makes it very easy to put your artwork on your walls: choose a wall, upload your work, choose a frame and save the finished image in high resolution
-                  </p>
-                  <div class="testimonials__info">
-                    <p class="testimonials__user">@Uartist83</p>
-                    <img src="./image/icon/stars.svg" alt="rating 5 stars" class="testimonials__rating">
-                  </div>
-                </div>
-                <div class="testimonials__item">
-                  <p class="testimonials__text">
-                    Just started using the app today and exploring all the different backgrounds. It is simple to use and there are lots of options. It is also a competitively priced product as some of these apps are quite expensive. I chose this app because I wanted something easy to use and cost-effective. I would recommend.
-                  </p>
-                  <div class="testimonials__info">
-                    <p class="testimonials__user">@mizzartz</p>
-                    <img src="./image/icon/stars.svg" alt="rating 5 stars" class="testimonials__rating">
-                  </div>
-                </div>
-                <div class="testimonials__item">
-                  <p class="testimonials__text">
-                    I am absolutely loving my new app Artmywall which lets me display my paintings in room settings. It is way better than having to push the settee around the house!! 😀
-                  </p>
-                  <div class="testimonials__info">
-                    <p class="testimonials__user">
-                      @juliatannerart
-                    </p>
-                    <img src="./image/icon/stars.svg" alt="rating 5 stars" class="testimonials__rating">
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide testimonials__desktop">
-              <div class="testimonials__content">
-                <div class="testimonials__item">
-                  <p class="testimonials__text">
-                    Love using the spaces to visualise my work.
-      Also love the support. Thank You!🙏💗
-                  </p>
-                  <div class="testimonials__info">
-                    <p class="testimonials__user">
-                      @Dg1463
-                    </p>
-                    <img src="./image/icon/stars.svg" alt="rating 5 stars" class="testimonials__rating">
-                  </div>
-                </div>
-                <div class="testimonials__item">
-                  <p class="testimonials__text">
-                    Super app! Finally I have a possibility to present my works.
-                    The interiors are very cool. Thank you.
-                  </p>
-                  <div class="testimonials__info">
-                    <p class="testimonials__user">@Mamekina</p>
-                    <img src="./image/icon/stars.svg" alt="rating 5 stars" class="testimonials__rating">
-                  </div>
-                </div>
-                <div class="testimonials__item">
-                  <p class="testimonials__text">
-                    Really helpful for my instagram art Account. It looks so much better with art my wall
-                  </p>
-                  <div class="testimonials__info">
-                    <p class="testimonials__user">@Sabrina Diana Art</p>
-                    <img src="./image/icon/stars.svg" alt="rating 5 stars" class="testimonials__rating">
-                  </div>
-                </div>
-                <div class="testimonials__item">
-                  <p class="testimonials__text">
-                    Very smart and useful app. Highly recommend for all artistas, galleries etc.
-                  </p>
-                  <div class="testimonials__info">
-                    <p class="testimonials__user">@Lor Salvator</p>
-                    <img src="./image/icon/stars.svg" alt="rating 5 stars" class="testimonials__rating">
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide testimonials__desktop">
-              <div class="testimonials__content">
-                <div class="testimonials__item">
-                  <p class="testimonials__text">
-                    Very easy to use and enables you to present your in real settings for your audience!
-                  </p>
-                  <div class="testimonials__info">
-                    <p class="testimonials__user">@reyhangulecart</p>
-                    <img src="./image/icon/stars.svg" alt="rating 5 stars" class="testimonials__rating">
-                  </div>
-                </div>
-                <div class="testimonials__item">
-                  <p class="testimonials__text">
-                    I've been rocking with this app for awhile, thank you for this unexpected feature 🙏
-                  </p>
-                  <div class="testimonials__info">
-                    <p class="testimonials__user">@johnsondonart</p>
-                    <img src="./image/icon/stars.svg" alt="rating 5 stars" class="testimonials__rating">
-                  </div>
-                </div>
-                <div class="testimonials__item">
-                  <p class="testimonials__text">
-                    Obsessed with my Artmywall app! Finally an app with rooms that have COLOR 🙏 I need this pink sofa!
-                  </p>
-                  <div class="testimonials__info">
-                    <p class="testimonials__user">@nikistearman</p>
-                    <img src="./image/icon/stars.svg" alt="rating 5 stars" class="testimonials__rating">
-                  </div>
-                </div>
-                <div class="testimonials__item">
-                  <p class="testimonials__text">
-                    The new backgrounds and updates are stellar! Thanks so much, Artmywall!
-                  </p>
-                  <div class="testimonials__info">
-                    <p class="testimonials__user">@kevinumbelphotography</p>
-                    <img src="./image/icon/stars.svg" alt="rating 5 stars" class="testimonials__rating">
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-pagination testimonials__pagination"></div>
-
+           </div>
         </div>
-        <div class="testimonials__navigation">
-          <div class="swiper-button-prev-custom">
-            <img src="./image/icon/arrow-left.svg" alt="arrow left">
-
-          </div>
-          <div class="swiper-button-next-custom">
-            <img src="./image/icon/arrow-right.svg" alt="arrow right">
-          </div>
+        <div class="testimonials__desktop-swiper">
+          <div class="testimonials__wrraper">
+            <div class="swiper test mySwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide testimonials__desktop">
+                  <div class="testimonials__content">
+                    <div class="testimonials__item">
+                      <p class="testimonials__text">
+                        I recommend this app! A real find for artists! Time saving and very clear interface with a bunch of designs for your taste.
+                      </p>
+                      <div class="testimonials__info">
+                        <p class="testimonials__user">
+                          @hi.alinalobanova
+                        </p>
+                        <img src="./image/icon/stars.svg" alt="rating 5 stars" class="testimonials__rating">
+                      </div>
+                    </div>
+                    <div class="testimonials__item">
+                      <p class="testimonials__text">
+                        Convenient iOS application (iPhone, iPad) for showcasing artworks in interiors. Artmywall makes it very easy to put your artwork on your walls: choose a wall, upload your work, choose a frame and save the finished image in high resolution
+                      </p>
+                      <div class="testimonials__info">
+                        <p class="testimonials__user">@Uartist83</p>
+                        <img src="./image/icon/stars.svg" alt="rating 5 stars" class="testimonials__rating">
+                      </div>
+                    </div>
+                    <div class="testimonials__item">
+                      <p class="testimonials__text">
+                        Just started using the app today and exploring all the different backgrounds. It is simple to use and there are lots of options. It is also a competitively priced product as some of these apps are quite expensive. I chose this app because I wanted something easy to use and cost-effective. I would recommend.
+                      </p>
+                      <div class="testimonials__info">
+                        <p class="testimonials__user">@mizzartz</p>
+                        <img src="./image/icon/stars.svg" alt="rating 5 stars" class="testimonials__rating">
+                      </div>
+                    </div>
+                    <div class="testimonials__item">
+                      <p class="testimonials__text">
+                        I am absolutely loving my new app Artmywall which lets me display my paintings in room settings. It is way better than having to push the settee around the house!! 😀
+                      </p>
+                      <div class="testimonials__info">
+                        <p class="testimonials__user">
+                          @juliatannerart
+                        </p>
+                        <img src="./image/icon/stars.svg" alt="rating 5 stars" class="testimonials__rating">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide testimonials__desktop">
+                  <div class="testimonials__content">
+                    <div class="testimonials__item">
+                      <p class="testimonials__text">
+                        Love using the spaces to visualise my work.
+          Also love the support. Thank You!🙏💗
+                      </p>
+                      <div class="testimonials__info">
+                        <p class="testimonials__user">
+                          @Dg1463
+                        </p>
+                        <img src="./image/icon/stars.svg" alt="rating 5 stars" class="testimonials__rating">
+                      </div>
+                    </div>
+                    <div class="testimonials__item">
+                      <p class="testimonials__text">
+                        Super app! Finally I have a possibility to present my works.
+                        The interiors are very cool. Thank you.
+                      </p>
+                      <div class="testimonials__info">
+                        <p class="testimonials__user">@Mamekina</p>
+                        <img src="./image/icon/stars.svg" alt="rating 5 stars" class="testimonials__rating">
+                      </div>
+                    </div>
+                    <div class="testimonials__item">
+                      <p class="testimonials__text">
+                        Really helpful for my instagram art Account. It looks so much better with art my wall
+                      </p>
+                      <div class="testimonials__info">
+                        <p class="testimonials__user">@Sabrina Diana Art</p>
+                        <img src="./image/icon/stars.svg" alt="rating 5 stars" class="testimonials__rating">
+                      </div>
+                    </div>
+                    <div class="testimonials__item">
+                      <p class="testimonials__text">
+                        Very smart and useful app. Highly recommend for all artistas, galleries etc.
+                      </p>
+                      <div class="testimonials__info">
+                        <p class="testimonials__user">@Lor Salvator</p>
+                        <img src="./image/icon/stars.svg" alt="rating 5 stars" class="testimonials__rating">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide testimonials__desktop">
+                  <div class="testimonials__content">
+                    <div class="testimonials__item">
+                      <p class="testimonials__text">
+                        Very easy to use and enables you to present your in real settings for your audience!
+                      </p>
+                      <div class="testimonials__info">
+                        <p class="testimonials__user">@reyhangulecart</p>
+                        <img src="./image/icon/stars.svg" alt="rating 5 stars" class="testimonials__rating">
+                      </div>
+                    </div>
+                    <div class="testimonials__item">
+                      <p class="testimonials__text">
+                        I've been rocking with this app for awhile, thank you for this unexpected feature 🙏
+                      </p>
+                      <div class="testimonials__info">
+                        <p class="testimonials__user">@johnsondonart</p>
+                        <img src="./image/icon/stars.svg" alt="rating 5 stars" class="testimonials__rating">
+                      </div>
+                    </div>
+                    <div class="testimonials__item">
+                      <p class="testimonials__text">
+                        Obsessed with my Artmywall app! Finally an app with rooms that have COLOR 🙏 I need this pink sofa!
+                      </p>
+                      <div class="testimonials__info">
+                        <p class="testimonials__user">@nikistearman</p>
+                        <img src="./image/icon/stars.svg" alt="rating 5 stars" class="testimonials__rating">
+                      </div>
+                    </div>
+                    <div class="testimonials__item">
+                      <p class="testimonials__text">
+                        The new backgrounds and updates are stellar! Thanks so much, Artmywall!
+                      </p>
+                      <div class="testimonials__info">
+                        <p class="testimonials__user">@kevinumbelphotography</p>
+                        <img src="./image/icon/stars.svg" alt="rating 5 stars" class="testimonials__rating">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-pagination testimonials__pagination"></div>
+    
+            </div>
+            <div class="testimonials__navigation">
+              <div class="swiper-button-prev-custom">
+                <img src="./image/icon/arrow-left.svg" alt="arrow left">
+    
+              </div>
+              <div class="swiper-button-next-custom">
+                <img src="./image/icon/arrow-right.svg" alt="arrow right">
+              </div>
+            </div>
+           </div>
         </div>
-       </div>
+
       </div>
     </section>
 
@@ -608,9 +635,10 @@ showSlides();
 
     </section>
 
-    <section class="app__section subscribe ">
-
-      <div class="container subscribe__container">
+    <section class="subscribe ">
+      <iframe class="subscribe__desktop" src="https://embeds.beehiiv.com/b8d7eb1e-c682-4a28-89c3-b374188cc2fe" data-test-id="beehiiv-embed" width="100%" height="320" frameborder="0" scrolling="no" style="border-radius: 4px; border: 2px solid #e5e7eb; margin: 0; background-color: transparent;"></iframe>
+      <iframe class="subscribe__mobile" src="https://embeds.beehiiv.com/b8d7eb1e-c682-4a28-89c3-b374188cc2fe" data-test-id="beehiiv-embed" width="480" height="320" frameborder="0" scrolling="no" style="border-radius: 4px; border: 2px solid #e5e7eb; margin: 0; background-color: transparent;"></iframe>
+      <!-- <div class="container subscribe__container">
         <div class="subscribe__content">
           <h2 class="subscribe__title">
             Subscribe to our <br class="subscribe__new-line"> newsletter
@@ -628,7 +656,7 @@ showSlides();
             </button>
           </form>
         </div>
-      </div>
+      </div> -->
     </section>
   </main>
 
@@ -707,6 +735,7 @@ showSlides();
             },
 
 });
+
   </script>
 
 </body>
