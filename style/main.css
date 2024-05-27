@@ -497,12 +497,14 @@ body {
   line-height: 36px;
   color: #ff4800;
   padding-bottom: 16px;
+  margin-left: 16px;
 }
 @media (min-width: 1020px) {
   .step__title {
     padding: 36px 0 24px 0;
     font-size: 36px;
     line-height: 43.2px;
+    margin: 0;
   }
 }
 .step__text {
@@ -510,11 +512,13 @@ body {
   font-weight: 400;
   line-height: 22.4px;
   color: #212529;
+  margin-left: 16px;
 }
 @media (min-width: 1020px) {
   .step__text {
     font-size: 18px;
     line-height: 25.2px;
+    margin-left: 16px;
   }
 }
 .step__image {
