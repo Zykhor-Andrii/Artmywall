@@ -6,6 +6,7 @@
 .container {
   max-width: 1170px;
   padding: 0 16px;
+  margin: 0 auto;
 }
 @media (min-width: 1020px) {
   .container {
@@ -46,7 +47,12 @@ body {
 }
 
 .main {
-  padding: 100px 0;
+  padding: 60px 0;
+}
+@media (min-width: 1020px) {
+  .main {
+    padding: 100px 0;
+  }
 }
 
 .app {
@@ -298,6 +304,7 @@ body {
   line-height: 21.6px;
   text-align: center;
   position: relative;
+  color: #212529;
 }
 @media (min-width: 1020px) {
   .header__logo-name {
@@ -321,18 +328,40 @@ body {
 @media (min-width: 1020px) {
   .header__portfolio-content {
     border: none;
+    height: 52px;
+    padding: 0 32px;
   }
 }
 .header__portfolio-logo {
   width: 22px;
   height: 20px;
 }
+@media (min-width: 1020px) {
+  .header__portfolio-logo {
+    width: 34px;
+    height: 32px;
+  }
+}
 .header__portfolio-name {
   padding: 0 6px 0 4px;
+  color: #212529;
+  font-size: 14px;
+}
+@media (min-width: 1020px) {
+  .header__portfolio-name {
+    padding: 0 16px 0 24px;
+    font-size: 18px;
+  }
 }
 .header__portfolio-arrow {
   width: 18px;
   height: 18px;
+}
+@media (min-width: 1020px) {
+  .header__portfolio-arrow {
+    width: 24px;
+    height: 24px;
+  }
 }
 .header__content {
   position: relative;
@@ -352,6 +381,7 @@ body {
 @media (min-width: 1020px) {
   .header__show {
     font-size: 32px;
+    margin-bottom: 24px;
   }
 }
 .header__title {
@@ -392,10 +422,12 @@ body {
   border-radius: 10px;
   background: rgb(0, 0, 0);
   text-decoration: none;
+  height: 57px;
 }
 @media (min-width: 1020px) {
   .header__link-app {
     width: 253px;
+    height: 70px;
   }
 }
 .header__link-content {
@@ -428,6 +460,14 @@ body {
   }
 }
 
+.step {
+  padding-bottom: 0;
+}
+@media (min-width: 1020px) {
+  .step {
+    padding-bottom: 100px;
+  }
+}
 .step__container {
   padding: 0;
 }
@@ -444,15 +484,25 @@ body {
     height: 744px;
     background-image: url("../image/ellipse/ellips-phone-biger.svg");
     background-repeat: no-repeat;
-    background-position: calc(100% + 55px) top;
+    background-position: right top;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 46px;
+    margin-bottom: 0;
   }
   .step__item--noellips {
     height: 485px;
     background-image: none;
     flex-direction: row-reverse;
+  }
+}
+@media (min-width: 1020px) {
+  .step__item--gap {
+    margin-bottom: 46px;
+  }
+}
+@media (min-width: 1020px) {
+  .step__info--withImage {
+    padding-top: 65px;
   }
 }
 @media (min-width: 1020px) {
@@ -467,6 +517,12 @@ body {
   align-items: flex-end;
   padding: 0 12px;
   margin-bottom: 20px;
+}
+@media (min-width: 1020px) {
+  .step__number {
+    padding: 0;
+    margin: 0;
+  }
 }
 .step__number-img {
   margin-right: 12px;
@@ -496,8 +552,7 @@ body {
   font-weight: 600;
   line-height: 36px;
   color: #ff4800;
-  padding-bottom: 16px;
-  margin-left: 16px;
+  padding: 0 16px 16px 16px;
 }
 @media (min-width: 1020px) {
   .step__title {
@@ -512,13 +567,13 @@ body {
   font-weight: 400;
   line-height: 22.4px;
   color: #212529;
-  margin-left: 16px;
+  margin: 0 16px;
 }
 @media (min-width: 1020px) {
   .step__text {
     font-size: 18px;
     line-height: 25.2px;
-    margin-left: 16px;
+    margin-left: 0;
   }
 }
 .step__image {
@@ -529,7 +584,7 @@ body {
   background-image: url("../image/carusel/Elements.svg");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: contain;
   height: 644px;
 }
 .step__image--nobackground {
@@ -572,7 +627,7 @@ body {
   .step__image-phone--position {
     position: absolute;
     top: 5px;
-    right: 149px;
+    right: 205px;
   }
 }
 .step__video {
@@ -591,7 +646,7 @@ body {
     width: 223px;
     height: 483px;
     top: 14px;
-    left: -143px;
+    left: -199px;
   }
 }
 @media (min-width: 1020px) {
@@ -664,6 +719,13 @@ body {
   line-height: 36px;
   text-align: center;
 }
+@media (min-width: 1020px) {
+  .testimonials__title {
+    padding: 72px 0 50px 0;
+    font-size: 36px;
+    line-height: 43.2px;
+  }
+}
 .testimonials__content :first-child {
   margin-bottom: 8px;
 }
@@ -708,6 +770,20 @@ body {
   color: #000000;
 }
 
+.bring {
+  margin-bottom: 20px;
+  padding: 0;
+}
+@media (min-width: 1020px) {
+  .bring {
+    background-image: url("../image/ellipse/ellips-phone-big.svg");
+    background-repeat: no-repeat;
+    background-size: 671px 663px;
+    background-position: bottom center;
+    margin-bottom: 100px;
+    padding-bottom: 100px;
+  }
+}
 .bring__container {
   padding: 0;
 }
@@ -718,6 +794,11 @@ body {
 }
 .bring__content {
   margin-bottom: 18px;
+}
+@media (min-width: 1020px) {
+  .bring__content {
+    margin-bottom: 60px;
+  }
 }
 .bring__title {
   font-size: 30px;
@@ -764,22 +845,36 @@ body {
 @media (min-width: 1020px) {
   .bring__image {
     background-image: none;
-    background-image: url("../image/ellipse/ellips-phone-big.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
+  }
+}
+.bring__image--desktop {
+  display: none;
+}
+@media (min-width: 1020px) {
+  .bring__image--desktop {
+    display: flex;
+  }
+}
+.bring__image--mobile {
+  display: flex;
+}
+@media (min-width: 1020px) {
+  .bring__image--mobile {
+    display: none;
   }
 }
 .bring__image-phones {
+  width: 100%;
   height: 256px;
   padding: 0 16px;
   margin-top: 158px;
 }
 @media (min-width: 1020px) {
   .bring__image-phones {
-    width: 700px;
-    height: 407px;
-    margin-top: 85px;
+    width: 768px;
+    height: 500px;
+    margin-left: 50px;
+    margin-top: 100px;
   }
 }
 
@@ -794,16 +889,35 @@ body {
     padding: 0 160px;
   }
 }
+.multiple__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .multiple__title {
-  font-size: 36px;
   margin-bottom: 24px;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 36px;
+  text-align: center;
+  color: #212529;
+}
+@media (min-width: 1020px) {
+  .multiple__title {
+    font-size: 36px;
+    line-height: 43.2px;
+  }
 }
 .multiple__text {
-  font-size: 24px;
+  font-size: 18px;
   margin-bottom: 32px;
+  color: #212529;
+  line-height: 23.76px;
+  width: 343px;
 }
 @media (min-width: 1020px) {
   .multiple__text {
+    font-size: 24px;
     line-height: 31.68px;
     width: 736px;
     margin: auto;
@@ -812,14 +926,12 @@ body {
 }
 .multiple__image {
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  border-radius: 16px;
 }
 @media (min-width: 1020px) {
   .multiple__image {
-    width: 1120px;
+    width: calc(100% - 320px);
     height: 520px;
-    border-radius: 16px;
   }
 }
 
@@ -839,7 +951,7 @@ body {
 @media (min-width: 1020px) {
   .subscribe__desktop {
     display: block;
-    width: 1120px;
+    width: calc(100% - 320px);
     border: none !important;
     border-radius: 24px !important;
   }
@@ -1134,6 +1246,11 @@ body {
   border: 1px solid rgb(206, 212, 218);
   margin-bottom: 16px;
 }
+@media (min-width: 1020px) {
+  .footer__line {
+    margin-bottom: 24px;
+  }
+}
 .footer__reserved {
   font-size: 12px;
   font-weight: 400;
@@ -1145,27 +1262,28 @@ body {
 @media (min-width: 1020px) {
   .footer__reserved {
     font-size: 14px;
+    margin-bottom: 39px;
   }
 }
 
 .policy {
-  background: #F8F9FA;
+  background: #f8f9fa;
 }
 .policy__header {
   height: -moz-max-content;
   height: max-content;
-  background: #F8F9FA;
+  background: #f8f9fa;
 }
 .policy__link {
   text-decoration: none;
   color: #212529;
 }
 .policy__main {
-  margin-bottom: 26px;
+  padding-bottom: 40px;
 }
 @media (min-width: 1020px) {
   .policy__main {
-    margin-bottom: 30px;
+    margin-bottom: 62px;
   }
 }
 .policy__item {
@@ -1179,10 +1297,35 @@ body {
 .policy__title {
   padding-bottom: 16px;
   text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 21.12px;
+}
+@media (min-width: 1020px) {
+  .policy__title {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 23.76px;
+  }
 }
 @media (min-width: 1020px) {
   .policy__container {
-    padding: 0 400px;
+    max-width: 640px;
+    margin: 0 auto;
+  }
+}
+.policy__text {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19.6px;
+  text-align: left;
+  color: #000000;
+}
+@media (min-width: 1020px) {
+  .policy__text {
+    font-size: 16px;
+    line-height: 22.4px;
+    text-align: left;
   }
 }
 .policy__text--section {
@@ -1223,10 +1366,10 @@ body {
   position: relative;
   overflow: hidden;
   width: 100vw;
-  background: #F8F9FA;
+  background: #f8f9fa;
 }
 .contact__header {
-  background: #F8F9FA;
+  background: #f8f9fa;
   position: relative;
 }
 @media (min-width: 1020px) {
@@ -1255,6 +1398,7 @@ body {
 .contact__content {
   position: relative;
   z-index: 1;
+  margin-bottom: 60px;
 }
 @media (min-width: 1020px) {
   .contact__content {
@@ -1293,7 +1437,7 @@ body {
   width: 223px;
   height: 53px;
   border-radius: 10px;
-  background: #FF4800;
+  background: #ff4800;
   font-size: 16px;
   font-weight: 600;
   line-height: 21.12px;
@@ -1339,7 +1483,7 @@ body {
   top: 86px;
   right: -340px;
   border-radius: 50%;
-  background: #FEAE8E;
+  background: #feae8e;
   z-index: 1;
   overflow: hidden;
 }

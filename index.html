@@ -176,28 +176,11 @@
   </div>
   </header>
 
-  <!-- <script>
-let translateValue = 0; 
-
-function showSlides() {
-  translateValue -= 119; // Зміщення на ширину одного блоку
-
-  document.querySelector('.header__carusel-container').style.transform = `translateX(${translateValue}px)`;
-
-  const firstSlide = document.querySelector('.header__carusel-item');
-  firstSlide.parentNode.appendChild(firstSlide);
-
-  setTimeout(showSlides, 1000); // Час між автоматичними переходами (в мілісекундах)
-}
-
-showSlides();
-  </script> -->
-
   <main class="main">
     <section  class="app__section step">
       <div class="container step__container">
         <div class="step__item">
-          <div class="step__info">
+          <div class="step__info step__info--withImage">
             <div class="step__number">
               <img class="step__number-img" src="./image/number/01.svg" alt="number one">
               <p class="step__number-text">Step</p>
@@ -213,13 +196,13 @@ showSlides();
 
           <div class="step__image">
             <div class="step__image-wrapper">
-              <video class="step__video" muted autoplay loop src="./image/onboarding/step2.MOV"></video>
+              <video class="step__video" muted autoplay loop playsinline controlsList="nodownload nofullscreen noremoteplayback" src="./image/onboarding/step2.MOV" ></video>
               <img class="step__image-phone step__image-phone--position" src="./image/phone/phone.png" alt="">
             </div>
 
           </div>
         </div>
-        <div class="step__item step__item--noellips">
+        <div class="step__item step__item--noellips step__item--gap">
           <div class="step__info">
             <div class="step__number">
               <img class="step__number-img" src="./image/number/02.svg" alt="number one">
@@ -235,15 +218,15 @@ showSlides();
 
           <div class="step__image step__image--nobackground">
               <div class="step__image-wrapper">
-                <video class="step__video step__video--anomal" muted autoplay loop src="./image/onboarding/step3.MOV"></video>
+                <video class="step__video step__video--anomal" muted autoplay loop playsinline controlsList="nodownload nofullscreen noremoteplayback" src="./image/onboarding/step3.MOV"></video>
                 <img class="step__image-phone " src="./image/phone/phone.png" alt="">
               </div>
           </div>
         </div>
         <div class="step__item">
-          <div class="step__info">
+          <div class="step__info step__info--withImage">
             <div class="step__number">
-              <img class="step__number-img" src="./image/number/04.svg" alt="number one">
+              <img class="step__number-img" src="./image/number/03.svg" alt="number one">
               <p class="step__number-text">Step</p>
             </div>
 
@@ -272,13 +255,12 @@ showSlides();
             <h3 class="step__title">Save final image in high resolution</h3>
 
             <p class="step__text">
-              Add artwork dimensions for proportional look on walls
-            </p>
+              Share on your website, social media, online store, print as a poster, magazine or book            </p>
           </div>
 
           <div class="step__image step__image--nobackground">
             <div class="step__image-wrapper">
-              <video class="step__video step__video--anomal" muted autoplay loop src="./image/onboarding/step4.MOV"></video>
+              <video class="step__video step__video--anomal" muted autoplay loop playsinline controlsList="nodownload nofullscreen noremoteplayback" src="./image/onboarding/step4.MOV"></video>
               <img class="step__image-phone" src="./image/phone/phone.png" alt="">
             </div>
 
@@ -612,8 +594,11 @@ showSlides();
           </p>
         </div>
 
-        <div class="bring__image">
+        <div class="bring__image bring__image--mobile">
           <img src="./image/phone/phones.png" alt="image-phones" class="bring__image-phones">
+        </div>
+        <div class="bring__image bring__image--desktop">
+          <img src="./image/phone/phones-desktop.png" alt="image-phones" class="bring__image-phones">
         </div>
 
       </div>
@@ -621,6 +606,7 @@ showSlides();
 
     <section class="app__section multiple">
 <div class="container">
+  <div class="multiple__content">
         <h2 class="multiple__title">
           Multiple artworks
         </h2>
@@ -628,6 +614,7 @@ showSlides();
         <p class="multiple__text">
           Display several artworks at once on one wall in free order. Create your own gallery wall or virtual show
         </p>
+      </div>
       </div>
         <div class="container multiple__container"></div>
         <img src="./image/gallery.png" alt="gallery" class="multiple__image">
