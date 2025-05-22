@@ -19,3 +19,4 @@ This project is a responsive landing page created for the Artmywall application,
 3. Open the `index.html` file in your browser to view the landing page.
 
 [DEMO LINK](https://artmywall.vercel.app/)
+https://artmywall.app/
